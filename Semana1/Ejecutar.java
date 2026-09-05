@@ -34,5 +34,23 @@ public class Ejecutar {
             System.out.println("b[" + i + "]=" + b[i] + " Potencia 2 = " + Math.pow(b[i],2));
         }
 
+        //Punto 3 del taller: 
+        /*
+        Dado un arreglo lineal de números, sumar separadamente los números pares y los
+        números impares.
+        int[] a = { 5, 16, 8, 9, 10, 25, 19, 3, 6, 22, 2 };
+        */
+       int sumaPar = 0, sumaImpar = 0 ;
+       for (int i = 0; i < a.length; i++) {
+            if (a[i] % 2 == 0) {
+                sumaPar += a[i];
+            } else {
+                sumaImpar += a[i];
+            }   
+
+       }
+       System.out.println("La suma de los pares es: " + sumaPar + " La suma de los Impares es: " + sumaImpar);
+
+
     }
 }
