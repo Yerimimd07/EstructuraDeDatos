@@ -1,6 +1,5 @@
 package Semana1;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
 
 public class Ejecutar {
     public static void main(String[] args) {
