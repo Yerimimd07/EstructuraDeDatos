@@ -1,7 +1,8 @@
 package Semana1;
 
 
-public class Ejemplo {
+public class Ejemplo
+ {
     public static void main(String[] args) {
         // Declaracion del arreglo-array-vector (Forma 1)
         int[] a = { 5, 16, 8, 9, 10, 25, 19, 3, 6, 22, 2 };
