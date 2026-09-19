@@ -11,7 +11,7 @@ public class OperacionesMatrices {
         return m;
     }
     
-    //Método que permite mostrar una matriz de enteros
+    //Método que permite mostrar una matriz de enteros.
     public String imprimirMatriz(int[][] m){
         String cad = "";
         for(int i = 0; i < m.length; i++){
