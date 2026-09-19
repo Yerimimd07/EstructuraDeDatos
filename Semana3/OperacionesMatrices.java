@@ -23,4 +23,22 @@ public class OperacionesMatrices {
         }
         return cad;
     }
+
+    //Sumar los elementos de cada fila y cada columna de una matriz.
+    public String sumarFilasColumnas(int[][]m){
+        for (int i = 0; i < m.length; i++){
+            int sumaFilas = 0;
+            for(int j = 0; j < m[0].length; j++){
+                sumaFilas += m[i][j];
+            }
+        }
+    }
+    public String sumarFilasColumnas(int[][]m){
+        for (int j = 0; j < m.length; j++){
+            int sumaColumnas = 0;
+            for(int i = 0; i < m[0].length; i++){
+                sumaColumnas += m[i][j];
+            }
+        }
+    }
 }
