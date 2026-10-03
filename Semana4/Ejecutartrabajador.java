@@ -23,18 +23,31 @@ public class Ejecutartrabajador {
         t[2] = objT3;
         t[3] = objT800;
 
-        // Sumar los salarios de los trabajadores
-        double sumaSalario = 0;
-        for (int i = 0; i < t.length; i++) {
-            sumaSalario += t[i].getSalario();
-        }
-        System.out.println("Suma de los salarios es: " + sumaSalario);
+        double totalSalarios = objT800.calcularSalarios(t);
+        System.out.println("Suma de los salarios es: " + totalSalarios);
 
-          // Sumar los salarios de los trabajadores
-        int sumaEdades = 0;
-        for (int i = 0; i < t.length; i++) {
-            sumaEdades += t[i].getEdad();
+        System.out.println("Promedio edades:  " + objT1.promedipEdades(t));
+
+        //creacion de los objetos  operario y vendedor 
+
+        //Creación de los objetos operario y vendedor
+        Trabajador objOperario1 = new Operario(101,"x","y",25,15000.0,40);
+        Trabajador objVendedor1 = new Vendedor(256,"z","w",24,100000.0,20);
+        Trabajador objVendedor2 = new Vendedor(200,"a","b",30,200000.0,30);
+        
+        //System.out.println("pago total: " + objOperario1.pagar());
+        //System.out.println("pago total: " + objVendedor1.pagar());
+        
+        //Creación de un nuevo arreglo de trabajadores
+        Trabajador[] e = new Trabajador[3];
+        e[0] = objOperario1;
+        e[1] = objVendedor1;
+        e[2] = objVendedor2;
+        
+        for(int i = 0; i < e.length; i++){
+            System.out.println("Salario mes: " + e[i].pagar());
         }
-        System.out.println("Suma de las edades es: " + sumaEdades);
+
+
     }
 }
