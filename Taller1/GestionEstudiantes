@@ -1,0 +1,21 @@
+public class GestionEstudiantes {
+    //Atributos 
+    private int id;
+    private String nombre;
+    private String apellido;
+    private String programaAc;
+    private double calificaiones;
+
+    //constructor
+    public GestionEstudiantes(int id, String nombre, String apellido, String programaAc, double calificaiones){
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.programaAc = programaAc;
+        this.calificaiones = calificaiones;
+
+    }
+
+
+
+}
