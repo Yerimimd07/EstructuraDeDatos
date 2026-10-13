@@ -31,13 +31,14 @@ public class Estudiantes {
 
     @Override
     public String toString() {
-        return "Estudiantes [codigoId : " + codigoId + ", nombres : " + nombres + ", programaAc :" + programaAc
-                + ", promedio : " + promedio + "]";
+        return "[Id : " + codigoId + ", Nombres : " + nombres + ", Programa Academico :" + programaAc
+                + ", Promedio : " + promedio + "]";
     }
 
     // Listar estudiantes
 
-    public static void listarEstudiantes(Estudiantes[] e) {
+    public void listarEstudiantes(Estudiantes[] e) {
+        System.out.println("\nLa lista de estudiantes: ");
         for (int i = 0; i < e.length; i++) {
             if (e[i] != null) {
                 System.out.println(e[i]);
@@ -46,23 +47,44 @@ public class Estudiantes {
     }
 
     // Metodo para buscar un estudiante por codigo
-    public static Estudiantes buscarEstudiante(Estudiantes[] e, int codigo) {
+    public Estudiantes buscarEstudiante(Estudiantes[] e, int codigoId) {
+
         for (int i = 0; i < e.length; i++) {
-            if (e[i] != null && e[i].getCodigoId() == codigo) {
+
+            if (e[i] != null && e[i].getCodigoId() == codigoId) {
+                System.out.println("\nEl estudiante es:");
+                System.out.println(e[i]);
                 return e[i];
             }
         }
+
+        System.out.println("\nNo se encontro el estudiante con codigo: " + codigoId);
         return null;
     }
 
     // Promedio igual o mayor a 4
     public void mostrarPromedio(Estudiantes[] e) {
-        System.out.println("Los estudiantes con promedio igual o superior a 4.0 son: ");
+        System.out.println("\nLos estudiantes con promedio igual o superior a 4.0 son: ");
         for (int i = 0; i < e.length; i++) {
             if (e[i] != null && e[i].getPromedio() >= 4.0) {
-                System.err.println(e[i]);
+                System.out.println(e[i]);
             }
         }
+    }
+
+    // Metodo para identificar el estudiante con mayor promedio
+    public Estudiantes mayorPromedio(Estudiantes[] e) {
+        Estudiantes mayor = null;
+
+        for (int i = 0; i < e.length; i++) {
+            if (e[i] != null) {
+                if (mayor == null || e[i].getPromedio() > mayor.getPromedio()) {
+                    mayor = e[i];
+                }
+            }
+        }
+        System.out.println("\nEl estudiante con el mejor promedio es: " + mayor);
+        return mayor;
     }
 
 }

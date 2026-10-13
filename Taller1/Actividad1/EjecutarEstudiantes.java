@@ -28,18 +28,16 @@ public class EjecutarEstudiantes {
         e[9] = est10;
 
         // listar estudiantes
-        Estudiantes.listarEstudiantes(e);
+        est01.listarEstudiantes(e);
 
         // Buscar un estudiante
-        Estudiantes encontrado = Estudiantes.buscarEstudiante(e, 1019);
-        if (encontrado != null) {
-            System.out.println("El estudiante buscado es: " + encontrado);
+        est01.buscarEstudiante(e, 1015);
 
-        } else {
-            System.out.println("Estudiante no registrado");
-        }
         // Estudiantes con promedio igual o superior a 4.0
         est01.mostrarPromedio(e);
+
+        // Estudiante con el mejor promedio
+        est01.mayorPromedio(e);
 
     }
 
