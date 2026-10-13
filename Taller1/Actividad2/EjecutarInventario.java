@@ -9,7 +9,7 @@ public class EjecutarInventario {
         Producto[][] inventario = objI.crearInventario(3, 4);
  
         // Registrar productos en posiciones específicas
-        System.out.println("=== REGISTRO DE PRODUCTOS ===");
+        System.out.println("\nREGISTRO DE PRODUCTOS");
         System.out.println(objI.registrarProducto(inventario, 0, 0, new Producto(101, "Teclado", 45000, 20)));
         System.out.println(objI.registrarProducto(inventario, 0, 2, new Producto(102, "Mouse", 25000, 35)));
         System.out.println(objI.registrarProducto(inventario, 1, 1, new Producto(103, "Monitor", 650000, 8)));
@@ -22,24 +22,24 @@ public class EjecutarInventario {
         System.out.println(objI.registrarProducto(inventario, 5, 5, new Producto(108, "Parlantes", 70000, 15)));
  
         // Mostrar el inventario con fila y columna
-        System.out.println("\n=== INVENTARIO ===");
+        System.out.println("\nINVENTARIO");
         System.out.println(objI.imprimirInventario(inventario));
  
         // Buscar un producto por código
-        System.out.println("=== BÚSQUEDA POR CÓDIGO ===");
+        System.out.println("\nBÚSQUEDA POR CÓDIGO");
         System.out.println(objI.buscarProducto(inventario, 103));
         System.out.println(objI.buscarProducto(inventario, 999));
  
         // Valor total del inventario
-        System.out.println("\n=== VALOR TOTAL DEL INVENTARIO ===");
+        System.out.println("\nVALOR TOTAL DEL INVENTARIO");
         System.out.println("$" + objI.calcularValorTotal(inventario));
  
         // Producto con mayor cantidad
-        System.out.println("\n=== PRODUCTO CON MAYOR CANTIDAD ===");
+        System.out.println("\nPRODUCTO CON MAYOR CANTIDAD");
         System.out.println(objI.productoMayorCantidad(inventario));
  
         // Posiciones vacías
-        System.out.println("\n=== POSICIONES VACÍAS ===");
+        System.out.println("\nPOSICIONES VACÍAS");
         System.out.println("Cantidad de posiciones vacías: " + objI.contarPosicionesVacias(inventario));
     }
 }
