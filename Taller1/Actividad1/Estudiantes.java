@@ -31,8 +31,38 @@ public class Estudiantes {
 
     @Override
     public String toString() {
-        return "Estudiantes [codigoId=" + codigoId + ", nombres=" + nombres + ", programaAc=" + programaAc
-                + ", promedio=" + promedio + "]";
+        return "Estudiantes [codigoId : " + codigoId + ", nombres : " + nombres + ", programaAc :" + programaAc
+                + ", promedio : " + promedio + "]";
+    }
+
+    // Listar estudiantes
+
+    public static void listarEstudiantes(Estudiantes[] e) {
+        for (int i = 0; i < e.length; i++) {
+            if (e[i] != null) {
+                System.out.println(e[i]);
+            }
+        }
+    }
+
+    // Metodo para buscar un estudiante por codigo
+    public static Estudiantes buscarEstudiante(Estudiantes[] e, int codigo) {
+        for (int i = 0; i < e.length; i++) {
+            if (e[i] != null && e[i].getCodigoId() == codigo) {
+                return e[i];
+            }
+        }
+        return null;
+    }
+
+    // Promedio igual o mayor a 4
+    public void mostrarPromedio(Estudiantes[] e) {
+        System.out.println("Los estudiantes con promedio igual o superior a 4.0 son: ");
+        for (int i = 0; i < e.length; i++) {
+            if (e[i] != null && e[i].getPromedio() >= 4.0) {
+                System.err.println(e[i]);
+            }
+        }
     }
 
 }
