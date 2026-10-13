@@ -39,6 +39,6 @@ public class Producto {
     // Representación en texto del producto
     @Override
     public String toString() {
-        return "[ Código: " + codigo + " | Nombre: " + nombre + " | Precio: $" + precio + " | Cantidad: " + cantidad "]";
+        return "[ Código: " + codigo + " | Nombre: " + nombre + " | Precio: $" + precio + " | Cantidad: " + cantidad +" ]";
     }
 }

@@ -1,11 +1,12 @@
 public class OperacionesInventario {
- 
-    // Método que crea la matriz de productos (todas las posiciones quedan vacías: null)
+
+    // Método que crea la matriz de productos (todas las posiciones quedan vacías:
+    // null)
     public Producto[][] crearInventario(int f, int c) {
         Producto[][] m = new Producto[f][c];
         return m;
     }
- 
+
     // Método que registra un producto en una posición específica
     public String registrarProducto(Producto[][] m, int fila, int columna, Producto p) {
         // Validar que la posición exista
@@ -19,7 +20,7 @@ public class OperacionesInventario {
         m[fila][columna] = p;
         return "Producto '" + p.getNombre() + "' registrado en fila " + fila + ", columna " + columna + ".";
     }
- 
+
     // Método que muestra los productos indicando fila y columna
     public String imprimirInventario(Producto[][] m) {
         String cad = "";
@@ -36,7 +37,7 @@ public class OperacionesInventario {
         }
         return cad;
     }
- 
+
     // Método que busca un producto por código
     public String buscarProducto(Producto[][] m, int codigo) {
         for (int i = 0; i < m.length; i++) {
@@ -48,7 +49,7 @@ public class OperacionesInventario {
         }
         return "No se encontró ningún producto con el código " + codigo + ".";
     }
- 
+
     // Método que calcula el valor total del inventario (suma de precio x cantidad)
     public double calcularValorTotal(Producto[][] m) {
         double total = 0;
@@ -61,7 +62,7 @@ public class OperacionesInventario {
         }
         return total;
     }
- 
+
     // Método que identifica el producto con mayor cantidad disponible
     public String productoMayorCantidad(Producto[][] m) {
         Producto mayor = null;
@@ -80,7 +81,7 @@ public class OperacionesInventario {
         }
         return "Producto con mayor cantidad (fila " + filaMayor + ", columna " + colMayor + "):\n" + mayor;
     }
- 
+
     // Método que cuenta las posiciones vacías
     public int contarPosicionesVacias(Producto[][] m) {
         int vacias = 0;
