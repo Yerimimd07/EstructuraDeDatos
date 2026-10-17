@@ -18,6 +18,10 @@ public class votos {
         colaDeVotos.offer("DOWNVOTE");
         colaDeVotos.offer("UPVOTE");
         colaDeVotos.offer("DOWNVOTE");
+        colaDeVotos.offer("DOWNVOTE");
+        colaDeVotos.offer("DOWNVOTE");
+        colaDeVotos.offer("UPVOTE");
+        colaDeVotos.offer("UPVOTE");
 
         int cantidadVotos = colaDeVotos.size();
 
@@ -36,7 +40,7 @@ public class votos {
         }
         System.out.println("Total votos a favor: " + upvotes);
         System.out.println("Total votos en contra: " + downvotes);
-        System.out.println("Total votos realizados" + totalVotos);
+        System.out.println("Total salida esperada: " + totalVotos);
 
     }
 
