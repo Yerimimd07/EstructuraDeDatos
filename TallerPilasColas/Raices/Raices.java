@@ -7,7 +7,10 @@ public class Raices {
         // Creación de la Pila de Enteros
         Stack<Integer> pila = new Stack<>();
         // Validar si la pila está vacía
-        System.out.println(pila.empty());
+        System.out.println("La pila esta vacia " + pila.empty());
+
+        pila.push(125);
+        pila.push(25);
 
         pila.push(27);
         pila.push(9);
@@ -22,7 +25,7 @@ public class Raices {
         System.out.println(pila); //
 
         // Validar si la pila está vacía
-        System.out.println(pila.empty());
+        System.out.println("La pila esta vacia " + pila.empty());
 
         double tolerancia = 1e-5; // Tolerancia razonable con 5 decimales
 
@@ -38,7 +41,7 @@ public class Raices {
 
             boolean sonIguales = Math.abs(raizA - raizB) < tolerancia;
 
-            System.out.println("Par " + (i + 1) + " -> a: " + a + ", b: " + b + " | ¿Son iguales? " + sonIguales);
+            System.out.println("\nPar: " + (i + 1) + " a: " + a + ", b: " + b + " | ¿Son iguales? " + sonIguales);
 
         }
 
